@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<a href="{% url 'task_detail' task.id %}">Назад</a>
 <form method="post">
   {% csrf_token %}
   <p>Вы точно хотите удалить эту заметку?{{ task }}</p>

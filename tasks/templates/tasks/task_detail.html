@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<a href="{% url 'task_list'%}">Назад</a>
 <h1>Task: {{ object }}</h1>
 <a href="{% url 'task_update' task.id %}">Изменить</a> | <a href="{% url 'task_delete' task.id %}">Удалить заметку</a>
 </body>

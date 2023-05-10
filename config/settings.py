@@ -32,6 +32,7 @@ INSTALLED_APPS += [
 INSTALLED_APPS += [
     'users',
     'tasks',
+    'registration_and_login',
 ]
 
 # Custom user model
@@ -107,3 +108,6 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# if user is not auth, he is reverse to login page
+LOGIN_URL = 'login'
