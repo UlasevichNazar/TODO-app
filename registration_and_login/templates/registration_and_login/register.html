@@ -5,12 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Войти</h1>
+<h1>Регистрация</h1>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Войти</button>
-    <p>Нет аккаунта?<a href="{% url 'register' %}">Зарегистрироваться</a> </p>
+    <button type="submit">Зарегистрироваться</button>
 </form>
 </body>
 </html>
