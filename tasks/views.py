@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from tasks.models import Task
 
@@ -26,4 +26,11 @@ class TaskCreate(CreateView):
 class TaskUpdate(UpdateView):
     model = Task
     fields = '__all__'
+    success_url = reverse_lazy('task_list')
+
+
+class TaskDelete(DeleteView):
+    model = Task
+    template_name = 'tasks/task_delete.html'
+    context_object_name = 'task'
     success_url = reverse_lazy('task_list')
