@@ -1,0 +1,8 @@
+{% extends 'tasks/base.html' %}
+{% load static %}
+
+{% block content %}
+<a href="{% url 'task_list'%}">Назад</a>
+<h1>Task: {{ object }}</h1>
+<a href="{% url 'task_update' task.id %}">Изменить</a> | <a href="{% url 'task_delete' task.id %}">Удалить заметку</a>
+{% endblock %}
